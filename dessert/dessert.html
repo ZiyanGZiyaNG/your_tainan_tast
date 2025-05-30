@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>點心推薦</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #033b2d;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: white;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
+
+    .card-button {
+      background-color: white;
+      color: black;
+      border-radius: 24px;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card-button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .card-button .info {
+      flex: 1;
+    }
+
+    .card-button h2 {
+      margin-top: 0;
+    }
+
+    .card-button ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .images {
+      display: flex;
+      gap: 12px;
+    }
+
+    .images img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .footer {
+      text-align: right;
+      color: white;
+      font-size: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>點心推薦</h1>
+
+  <a href="https://www.google.com/maps?sca_esv=1bbf12dcdfda0a2c&rlz=1C1CHBF_enTW1154TW1154&output=search&q=el.olor%E6%B3%95%E5%BC%8F%E7%94%9C%E9%BB%9E&source=lnms&fbs=ABzOT_AGBMogrnfXHu6GxeqSvos9CJsmT__hNolpvT0Yqdg7poLwHJQ7Z-uqLyJR7SGqcX98TaadUmmZAEGx9S-xHXpZ6Mk0XI2WcKH4UcyezZMPibY1fKgY-FG-oGu9JQr0RjyvF-YdZYf1dHQhPaQeK6ZeH2hGcylDqXfReS3BcCgHLaTnPdy7UhL0pYbyAP1o0g_ahQWC&entry=mc&ved=1t:200715&ictx=111" class="card-button">
+    <div class="info">
+      <h2>1. El.Olor法式甜點</h2>
+      <ul>
+        <li>營業時間：11:30～19:00</li>
+        <li>地址：北區文成二路93號</li>
+        <li>推薦： 一顆檸檬</li>
+      </ul>
+    </div>
+    <div class="images">
+      <img src="EL1.jpg" alt="紅紅的">
+      <img src="EL2.jpg" alt="lemon">
+    </div>
+  </a>
+
+  <a href="https://www.google.com/maps/place/%E9%A4%B5%E9%A3%9F%E4%B8%89%E5%88%BB%EF%BC%88%E5%85%A7%E6%9C%89%E8%B2%93%E8%B2%93%EF%BC%8C%E6%AF%8F%E6%9C%88%E5%85%AC%E4%BC%91%E5%85%AC%E5%91%8A%E6%96%BCig+%EF%BC%89/@23.0185618,120.2085518,17z/data=!3m1!4b1!4m6!3m5!1s0x346e77ef26c67c19:0xf2893eb4f6147fb7!8m2!3d23.0185569!4d120.2111267!16s%2Fg%2F11qyqcbzlq?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="card-button">
+    <div class="info">
+      <h2>2. 餵食三刻</h2>
+      <ul>
+        <li>營業時間：18:30～02:00</li>
+        <li>地址：北區北成路27號</li>
+        <li>推薦：白玉抹茶塔</li>
+      </ul>
+    </div>
+    <div class="images">
+      <img src="餵食1.jpg" alt="草莓">
+      <img src="餵食2.jpg" alt="抹茶">
+    </div>
+  </a>
+
+  <a href="https://www.google.com/maps/place/Cr%C3%A8me+Anglaise+(%E5%AE%89%E6%A0%BC%E8%90%8A%E6%96%AF%E7%94%9F%E4%B9%B3%E6%8D%B2%E5%B0%88%E8%B3%A3%E5%BA%97%EF%BC%89/@22.9956286,120.1993698,17z/data=!3m1!4b1!4m6!3m5!1s0x346e75e5176c67b9:0x19f2f7f6f12dc459!8m2!3d22.9956237!4d120.2019447!16s%2Fg%2F11p4z2z71j?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="card-button">
+    <div class="info">
+      <h2>3. 安格萊斯甜點</h2>
+      <ul>
+        <li>營業時間：15:00～23:00</li>
+        <li>地址：中西區永福路二段176號</li>
+        <li>推薦：有連爺爺</li>
+      </ul>
+    </div>
+    <div class="images">
+      <img src="安格1.jpg" alt="芒果">
+      <img src="安格2.jpg" alt="草莓">
+    </div>
+  </a>
+
+  <div class="footer">
+    2 3 4 5 6 7 8 9 … … …
+  </div>
+</body>
+</html>
