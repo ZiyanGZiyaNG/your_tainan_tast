@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>屬於你的台南美食</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .hero {
+      background: url('背景.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .button-group {
+      position: absolute;
+      top: 220px;
+      right: 240px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .food-button {
+      display: flex;
+      align-items: center;
+      background-color: #1a4c3b;
+      color: white;
+      padding: 26px 44px;
+      border-radius: 66px;
+      border: none;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    .food-button:hover {
+      background-color: #256d55;
+    }
+
+    .icon-circle {
+      background-color: white;
+      border-radius: 50%;
+      width: 92px;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 30px;
+    }
+
+    .icon-circle img {
+      width: 52px;
+      height: 52px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="button-group">
+      <!-- 早餐按鈕（已連結） -->
+      <a href="breakfast/breakfast.html" class="food-button">
+        <div class="icon-circle">
+          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="">
+        </div>
+        早餐
+      </a>
+
+      <!-- 午餐按鈕（占位） -->
+      <a href="lunch/lunch.html" class="food-button">
+        <div class="icon-circle">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="">
+        </div>
+        午餐
+      </a>
+
+      <!-- 晚餐按鈕（占位） -->
+      <a href="dinner/dinner.html" class="food-button">
+        <div class="icon-circle">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046786.png" alt="">
+        </div>
+        晚餐
+      </a>
+
+      <!-- 點心按鈕（占位） -->
+      <a href="dessert/dessert.html" class="food-button">
+        <div class="icon-circle">
+          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075972.png" alt="">
+        </div>
+        點心
+      </a>
+    </div>
+  </div>
+</body>
+</html>
