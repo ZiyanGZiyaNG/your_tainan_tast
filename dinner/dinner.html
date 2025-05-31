@@ -4,17 +4,41 @@
   <meta charset="UTF-8">
   <title>晚餐推薦</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
     body {
       margin: 0;
       padding: 40px;
       background-color: #033b2d;
       font-family: 'Noto Sans TC', sans-serif;
       color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     h1 {
       font-size: 60px;
       margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .home-button {
+      display: inline-block;
+      background-color: white;
+      color: #033b2d;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 20px;
+      margin-bottom: 40px;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .home-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     }
 
     .card-button {
@@ -41,86 +65,140 @@
 
     .card-button h2 {
       margin-top: 0;
+      color: #033b2d;
+      font-size: 32px;
     }
 
     .card-button ul {
-      list-style-type: circle;
-      padding-left: 20px;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 15px 0;
+    }
+
+    .card-button li {
       margin: 10px 0;
+      font-size: 18px;
+      color: #333;
     }
 
     .images {
       display: flex;
-      gap: 12px;
+      gap: 20px;
     }
 
     .images img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
       object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card-button:hover .images img {
+      transform: scale(1.05);
     }
 
     .footer {
-      text-align: right;
+      margin-top: auto;
+      text-align: center;
       color: white;
-      font-size: 20px;
-      margin-top: 40px;
+      font-size: 16px;
+      opacity: 0.8;
+      padding: 20px 0;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .pagination-button {
+      background-color: white;
+      color: #033b2d;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .pagination-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .pagination-button.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
   <h1>晚餐推薦</h1>
 
-  <a href="https://www.google.com/maps/place/%E9%A4%93%E7%94%B7%E9%A3%9F%E5%A0%82/@22.9891646,120.1864211,17z/data=!3m1!4b1!4m6!3m5!1s0x346e77644f5074d9:0x6b9a9dfae8016427!8m2!3d22.9891597!4d120.191292!16s%2Fg%2F11jvc3m9r0?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="card-button">
+  <a href="../index.html" class="home-button">返回首頁</a>
+
+  <a href="https://www.google.com/maps/place/食上主義餐酒館/@22.9807074,120.2049609,17z/data=!3m1!4b1!4m6!3m5!1s0x346e768048edf7ed:0xa6d42281cb630a!8m2!3d22.9807025!4d120.2075358!16s%2Fg%2F11fyzdx5dc?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>1. 餓男食堂</h2>
+      <h2>食上主義餐酒館</h2>
       <ul>
-        <li>營業時間：17:00–24:00</li>
-        <li>地址：中西區華南路222號</li>
-        <li>推薦：鮭魚生魚片</li>
+        <li>⏰ 營業時間：17:00-23:00</li>
+        <li>📍 地址：台南市中西區民生路二段200號</li>
+        <li>👍 推薦：海鮮義大利麵</li>
       </ul>
     </div>
     <div class="images">
-      <img src="餓男1.jpg" alt="生魚片">
-      <img src="餓男2.jpg" alt="井飯">
+      <img src="食上1.jpg" alt="蔡家招牌">
+      <img src="食上2.jpg" alt="燒餅">
     </div>
   </a>
 
-  <a href="https://www.google.com/maps/place/%E6%97%A5%E6%9B%9C%E6%97%A5%E3%82%AA%E3%83%A0%E3%83%A9%E3%82%A4%E3%82%B9%EF%BC%88%E5%BA%97%E4%BC%91%E8%AB%8B%E8%87%B3IG%E3%80%81FB%E5%85%AC%E5%91%8A%EF%BC%89/data=!4m7!3m6!1s0x346e77dcada77519:0xcebb4b75fc6c7c81!8m2!3d22.995652!4d120.214525!16s%2Fg%2F11ghlw17zv!19sChIJGXWnrdx3bjQRgXxs_HVLu84?authuser=0&hl=zh-TW&rclk=1" class="card-button">
+  <a href="https://www.google.com/maps/place/%E6%97%A5%E6%9B%9C%E6%97%A5%E3%82%AA%E3%83%A0%E3%83%A9%E3%82%A4%E3%82%B9%EF%BC%88%E5%BA%97%E4%BC%91%E8%AB%8B%E8%87%B3IG%E3%80%81FB%E5%85%AC%E5%91%8A%EF%BC%89/data=!4m7!3m6!1s0x346e77dcada77519:0xcebb4b75fc6c7c81!8m2!3d22.995652!4d120.214525!16s%2Fg%2F11ghlw17zv!19sChIJGXWnrdx3bjQRgXxs_HVLu84?authuser=0&hl=zh-TW&rclk=1" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>2. 日曜日</h2>
+      <h2>日曜日</h2>
       <ul>
-        <li>營業時間：17:30–23:30</li>
-        <li>地址：東區育樂街158巷24號</li>
-        <li>推薦：咖哩飯</li>
+        <li>⏰ 營業時間：17:00-22:00</li>
+        <li>📍 地址：台南市中西區民族路二段80號</li>
+        <li>👍 推薦：咖哩飯</li>
       </ul>
     </div>
     <div class="images">
-      <img src="日曜日1.jpg" alt="咖哩'">
-      <img src="日曜日2.jpg" alt="日曜日">
-    </div>
+      <img src="日曜日1.jpg" alt="上崙料理">
+      <img src="日曜日2.jpg" alt="肉粽特寫">
     </div>
   </a>
 
-  <a href="https://www.google.com/maps?sca_esv=fd40bbb914dc0882&rlz=1C1CHBF_enTW1154TW1154&biw=1920&bih=945&output=search&q=%E6%99%82%E5%B0%9A%E4%B8%BB%E7%BE%A9&source=lnms&fbs=ABzOT_AGBMogrnfXHu6GxeqSvos9YNXXoqT4M1zPLW-rz66fPdnN-FQ3iGV2FMoO18DCSL_aqEAMoSvgUng5RbnqoxGymZC8nDjMb77MqoGQGXJASORhhdtE0C8kwNd6VotuLdZecDgM8gspmIntyRkTH9YmMxi73-EPEEdr3038qPOS7aMBfR9-N6Do1Vh0luXMQnzGVjaWGNHjdw-q1iEwgc9p-LfOvw&entry=mc&ved=1t:200715&ictx=111" class="card-button">
+  <a href="https://www.google.com/maps/place/餓男食堂/@22.9891597,120.1887171,17z/data=!4m6!3m5!1s0x346e77644f5074d9:0x6b9a9dfae8016427!8m2!3d22.9891597!4d120.191292!16s%2Fg%2F11jvc3m9r0?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>3. 食上主義餐酒館</h2>
+      <h2>餓男食堂</h2>
       <ul>
-        <li>營業時間：17:00–23:00</li>
-        <li>地址：南區體育路21巷5-1號</li>
-        <li>推薦：西式香辣蒜香蝦、蜂蜜南洋風豬里肌</li>
+        <li>⏰ 營業時間：17:30-22:00</li>
+        <li>📍 地址：台南市中西區民權路二段150號</li>
+        <li>👍 推薦：生魚片壽司</li>
       </ul>
     </div>
     <div class="images">
-      <img src="食上1.jpg" alt="義大利麵">
-      <img src="食上2.jpg" alt="燉飯">
-    </div>
+      <img src="餓男1.jpg" alt="武廟肉圓特寫">
+      <img src="餓男2.jpg" alt="武廟店面">
     </div>
   </a>
 
   <div class="footer">
-    2 3 4 5 6 7 8 9 … … …
+    ZiyanGZiyaNG
+  </div>
+
+  <div class="pagination">
+    <a href="dinner.html" class="pagination-button disabled">上一頁</a>
+    <a href="dinner2.html" class="pagination-button">下一頁</a>
   </div>
 </body>
 </html>
