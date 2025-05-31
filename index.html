@@ -22,15 +22,33 @@
       background-size: cover;
       height: 100vh;
       position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 120px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      gap: 120px;
+      margin-top: 40px;
+    }
+
+    .menu-section {
+      text-align: center;
+    }
+
+    .menu-title {
+      color: white;
+      font-size: 42px;
+      margin-bottom: 32px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .button-group {
-      position: absolute;
-      top: 220px;
-      right: 240px;
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 20px;
     }
 
     .food-button {
@@ -38,72 +56,171 @@
       align-items: center;
       background-color: #1a4c3b;
       color: white;
-      padding: 26px 44px;
-      border-radius: 66px;
+      padding: 16px 28px;
+      border-radius: 50px;
       border: none;
-      font-size: 40px;
+      font-size: 28px;
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .food-button:hover {
       background-color: #256d55;
+      transform: translateY(-5px);
     }
 
     .icon-circle {
       background-color: white;
       border-radius: 50%;
-      width: 92px;
-      height: 92px;
+      width: 60px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 30px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .food-button:hover .icon-circle {
+      transform: rotate(15deg);
     }
 
     .icon-circle img {
-      width: 52px;
-      height: 52px;
+      width: 36px;
+      height: 36px;
+    }
+
+    .main-title {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 64px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .data-source {
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+    }
+
+    .data-source .food-button {
+      font-size: 20px;
+      padding: 12px 24px;
+    }
+
+    .data-source .icon-circle {
+      width: 44px;
+      height: 44px;
+    }
+
+    .data-source .icon-circle img {
+      width: 26px;
+      height: 26px;
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <div class="button-group">
-      <!-- 早餐按鈕（已連結） -->
-      <a href="breakfast/breakfast.html" class="food-button">
-        <div class="icon-circle">
-          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="">
-        </div>
-        早餐
-      </a>
+  
+    
+    <div class="content-wrapper">
+      <!-- 一般選單區塊 -->
+      <div class="menu-section">
+        <h2 class="menu-title">美食選單</h2>
+        <div class="button-group">
+          <a href="breakfast/breakfast.html" class="food-button">
+            <div class="icon-circle">
+              <img src="breakfast/breakfast_icon.png" alt="早餐">
+            </div>
+            早餐
+          </a>
 
-      <!-- 午餐按鈕（占位） -->
-      <a href="lunch/lunch.html" class="food-button">
-        <div class="icon-circle">
-          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="">
-        </div>
-        午餐
-      </a>
+          <a href="lunch/lunch.html" class="food-button">
+            <div class="icon-circle">
+              <img src="lunch/lunch_icon.png" alt="午餐">
+            </div>
+            午餐
+          </a>
 
-      <!-- 晚餐按鈕（占位） -->
-      <a href="dinner/dinner.html" class="food-button">
-        <div class="icon-circle">
-          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046786.png" alt="">
-        </div>
-        晚餐
-      </a>
+          <a href="dinner/dinner.html" class="food-button">
+            <div class="icon-circle">
+              <img src="dinner/dinner_icon.png" alt="晚餐">
+            </div>
+            晚餐
+          </a>
 
-      <!-- 點心按鈕（占位） -->
-      <a href="dessert/dessert.html" class="food-button">
-        <div class="icon-circle">
-          <img src="https://cdn-icons-png.flaticon.com/512/3075/3075972.png" alt="">
+          <a href="dessert/dessert.html" class="food-button">
+            <div class="icon-circle">
+              <img src="dessert/dessert_icon.png" alt="點心">
+            </div>
+            點心
+          </a>
         </div>
-        點心
+      </div>
+
+      <!-- 隨機選單區塊 -->
+      <div class="menu-section">
+        <h2 class="menu-title">隨機推薦</h2>
+        <div class="button-group">
+          <a href="breakfast/random.html" class="food-button">
+            <div class="icon-circle">
+              <img src="breakfast/random breakfast_icon.png" alt="早餐隨機">
+            </div>
+            早餐隨機
+          </a>
+
+          <a href="lunch/random.html" class="food-button">
+            <div class="icon-circle">
+              <img src="lunch/random luch_icon.png" alt="午餐隨機">
+            </div>
+            午餐隨機
+          </a>
+
+          <a href="dinner/random.html" class="food-button">
+            <div class="icon-circle">
+              <img src="dinner/random dinner_icon.png" alt="晚餐隨機">
+            </div>
+            晚餐隨機
+          </a>
+
+          <a href="dessert/random.html" class="food-button">
+            <div class="icon-circle">
+              <img src="dessert/random dessert_icon.png" alt="點心隨機">
+            </div>
+            點心隨機
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 資料來源按鈕 -->
+    <div class="data-source">
+      <a href="data/data.html" class="food-button">
+        <div class="icon-circle">
+          <img src="data/data_icon.png" alt="資料來源">
+        </div>
+        資料來源
       </a>
+    </div>
+
+    <div class="footer">
+      ZiyanGZiyaNG
     </div>
   </div>
 </body>
