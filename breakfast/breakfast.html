@@ -4,17 +4,41 @@
   <meta charset="UTF-8">
   <title>早餐推薦</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
     body {
       margin: 0;
       padding: 40px;
       background-color: #033b2d;
       font-family: 'Noto Sans TC', sans-serif;
       color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     h1 {
       font-size: 60px;
       margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .home-button {
+      display: inline-block;
+      background-color: white;
+      color: #033b2d;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 20px;
+      margin-bottom: 40px;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .home-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     }
 
     .card-button {
@@ -41,44 +65,93 @@
 
     .card-button h2 {
       margin-top: 0;
+      color: #033b2d;
+      font-size: 32px;
     }
 
     .card-button ul {
-      list-style-type: circle;
-      padding-left: 20px;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 15px 0;
+    }
+
+    .card-button li {
       margin: 10px 0;
+      font-size: 18px;
+      color: #333;
     }
 
     .images {
       display: flex;
-      gap: 12px;
+      gap: 20px;
     }
 
     .images img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
       object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card-button:hover .images img {
+      transform: scale(1.05);
     }
 
     .footer {
-      text-align: right;
+      margin-top: auto;
+      text-align: center;
       color: white;
-      font-size: 20px;
-      margin-top: 40px;
+      font-size: 16px;
+      opacity: 0.8;
+      padding: 20px 0;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .pagination-button {
+      background-color: white;
+      color: #033b2d;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .pagination-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .pagination-button.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
   <h1>早餐推薦</h1>
 
-  <a href="https://www.google.com.tw/maps/place/%E8%94%A1%E5%AE%B6%E8%B1%86%E6%BC%BF/@22.9750044,120.1937115,17z/data=!3m1!4b1!4m6!3m5!1s0x346e75d0d8e06db3:0x3ce7b7fa7f81409b!8m2!3d22.9749995!4d120.1962864!16s%2Fg%2F11btv6cm1k?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="card-button">
+  <a href="../index.html" class="home-button">返回首頁</a>
+
+  <a href="https://www.google.com.tw/maps/place/蔡家豆漿/@22.9750044,120.1937115,17z/data=!3m1!4b1!4m6!3m5!1s0x346e75d0d8e06db3:0x3ce7b7fa7f81409b!8m2!3d22.9749995!4d120.1962864!16s%2Fg%2F11btv6cm1k?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>1. 蔡家豆漿</h2>
+      <h2>蔡家豆漿</h2>
       <ul>
-        <li>營業時間：05:00–11:00</li>
-        <li>地址：南區大成路二段50號</li>
-        <li>推薦：燒餅</li>
+        <li>⏰ 營業時間：05:00–11:00</li>
+        <li>📍 地址：南區大成路二段50號</li>
+        <li>👍 推薦：燒餅</li>
       </ul>
     </div>
     <div class="images">
@@ -87,40 +160,45 @@
     </div>
   </a>
 
-  <a href="https://www.google.com/maps?sca_esv=1bbf12dcdfda0a2c&rlz=1C1CHBF_enTW1154TW1154&output=search&q=%E4%B8%8A%E5%B4%99%E6%97%A9%E9%A4%90%E5%BA%97&source=lnms&fbs=ABzOT_AGBMogrnfXHu6GxeqSvos9dsaHbNlDeOhJhm1WsVbBDa2CR4ho-tcX821ubsa57w-2G8XARjijED7WfKXjKk-o9LLVlHfNenBqXmI0x0nN95FuT6NHKxZWwUYL7_kltJ5WLasbX2089ZydehUGfgUNbHaqZWPTR5g-9nrSrJ4sBlPdxBjFko9RFh9EV6ZeY5qI7q9t&entry=mc&ved=1t:200715&ictx=111" class="card-button">
+  <a href="https://www.google.com/maps?sca_esv=1bbf12dcdfda0a2c&rlz=1C1CHBF_enTW1154TW1154&output=search&q=上崙早餐店&source=lnms&fbs=ABzOT_AGBMogrnfXHu6GxeqSvos9dsaHbNlDeOhJhm1WsVbBDa2CR4ho-tcX821ubsa57w-2G8XARjijED7WfKXjKk-o9LLVlHfNenBqXmI0x0nN95FuT6NHKxZWwUYL7_kltJ5WLasbX2089ZydehUGfgUNbHaqZWPTR5g-9nrSrJ4sBlPdxBjFko9RFh9EV6ZeY5qI7q9t&entry=mc&ved=1t:200715&ictx=111" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>2. 上崙早餐店</h2>
+      <h2>上崙早餐店</h2>
       <ul>
-        <li>營業時間：05:30–10:30</li>
-        <li>地址：仁德區德崙路378號</li>
-        <li>推薦：肉粽加蛋</li>
+        <li>⏰ 營業時間：05:30–10:30</li>
+        <li>📍 地址：仁德區德崙路378號</li>
+        <li>👍 推薦：肉粽加蛋</li>
       </ul>
     </div>
     <div class="images">
       <img src="上崙1.jpg" alt="上崙料理">
       <img src="上崙2.jpg" alt="肉粽特寫">
     </div>
-    </div>
   </a>
 
-  <a href="https://www.google.com/maps?sca_esv=1bbf12dcdfda0a2c&rlz=1C1CHBF_enTW1154TW1154&output=search&q=%E6%AD%A6%E5%BB%9F%E8%82%89%E5%9C%93&source=lnms&fbs=ABzOT_AGBMogrnfXHu6GxeqSvos9dsaHbNlDeOhJhm1WsVbBDSKyl4XWSb1CZgmbzVRWqBo70Jj9ewh2WSxhRu4WvniAU6nmfxfMPvRl-c14dcsIuZjezvb2WxLwDXTOGJWMqWNqd8_K0dcuiq68GeeMvbl0X-MsA8zTIdKx7-rh-dgZlkoUYUMgSSnBUGRfYGaUlQotRB4-&entry=mc&ved=1t:200715&ictx=111" class="card-button">
+  <a href="https://www.google.com/maps/place/台南武廟肉圓/data=!4m7!3m6!1s0x346e7663d5b3bac9:0x992fea426d702df0!8m2!3d22.9960185!4d120.2022298!16s%2Fg%2F1tg6mwt7!19sChIJybqz1WN2bjQR8C1wbULqL5k?authuser=0&hl=zh-TW&rclk=1" 
+     class="card-button" target="_blank">
     <div class="info">
-      <h2>3. 武廟肉圓</h2>
+      <h2>武廟肉圓</h2>
       <ul>
-        <li>營業時間：08:30–16:30</li>
-        <li>地址：中西區永福路二段194號</li>
-        <li>推薦：清蒸肉圓</li>
+        <li>⏰ 營業時間：08:30–16:30</li>
+        <li>📍 地址：中西區永福路二段194號</li>
+        <li>👍 推薦：清蒸肉圓</li>
       </ul>
     </div>
     <div class="images">
       <img src="武廟1.jpg" alt="武廟肉圓特寫">
       <img src="武廟2.jpg" alt="武廟店面">
     </div>
-    </div>
   </a>
 
   <div class="footer">
-    2 3 4 5 6 7 8 9 … … …
+    ZiyanGZiyaNG
+  </div>
+
+  <div class="pagination">
+    <a href="breakfast.html" class="pagination-button disabled">上一頁</a>
+    <a href="breakfats2.html" class="pagination-button">下一頁</a>
   </div>
 </body>
 </html>
