@@ -4,142 +4,11 @@
   <meta charset="UTF-8">
   <title>屬於你的台南美食</title>
   <link rel="icon" href="favicon.png" type="image/png">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Noto Sans TC', sans-serif;
-    }
-
-    .hero {
-      background: url('背景.jpg') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 120px;
-    }
-
-    .content-wrapper {
-      display: flex;
-      gap: 120px;
-      margin-top: 40px;
-    }
-
-    .menu-section {
-      text-align: center;
-    }
-
-    .menu-title {
-      color: white;
-      font-size: 42px;
-      margin-bottom: 32px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .food-button {
-      display: flex;
-      align-items: center;
-      background-color: #1a4c3b;
-      color: white;
-      padding: 16px 28px;
-      border-radius: 50px;
-      border: none;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .food-button:hover {
-      background-color: #256d55;
-      transform: translateY(-5px);
-    }
-
-    .icon-circle {
-      background-color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .food-button:hover .icon-circle {
-      transform: rotate(15deg);
-    }
-
-    .icon-circle img {
-      width: 36px;
-      height: 36px;
-    }
-
-    .main-title {
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 64px;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 16px;
-      opacity: 0.8;
-    }
-
-    .data-source {
-      position: absolute;
-      bottom: 60px;
-      left: 60px;
-    }
-
-    .data-source .food-button {
-      font-size: 20px;
-      padding: 12px 24px;
-    }
-
-    .data-source .icon-circle {
-      width: 44px;
-      height: 44px;
-    }
-
-    .data-source .icon-circle img {
-      width: 26px;
-      height: 26px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="hero">
-  
-    
     <div class="content-wrapper">
       <!-- 一般選單區塊 -->
       <div class="menu-section">
@@ -220,7 +89,6 @@
       </a>
     </div>
 
-    
     <div class="footer">
       ZiyanGZiyaNG
     </div>
