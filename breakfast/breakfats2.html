@@ -1,152 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>早餐推薦</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-
-    body {
-      margin: 0;
-      padding: 40px;
-      background-color: #033b2d;
-      font-family: 'Noto Sans TC', sans-serif;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 60px;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .home-button {
-      display: inline-block;
-      background-color: white;
-      color: #033b2d;
-      text-decoration: none;
-      padding: 15px 30px;
-      border-radius: 50px;
-      font-size: 20px;
-      margin-bottom: 40px;
-      transition: all 0.3s ease;
-      width: fit-content;
-    }
-
-    .home-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-    }
-
-    .card-button {
-      background-color: white;
-      color: black;
-      border-radius: 24px;
-      padding: 20px 30px;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card-button:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-    }
-
-    .card-button .info {
-      flex: 1;
-    }
-
-    .card-button h2 {
-      margin-top: 0;
-      color: #033b2d;
-      font-size: 32px;
-    }
-
-    .card-button ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 15px 0;
-    }
-
-    .card-button li {
-      margin: 10px 0;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .images {
-      display: flex;
-      gap: 20px;
-    }
-
-    .images img {
-      width: 150px;
-      height: 150px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .card-button:hover .images img {
-      transform: scale(1.05);
-    }
-
-    .footer {
-      margin-top: auto;
-      text-align: center;
-      color: white;
-      font-size: 16px;
-      opacity: 0.8;
-      padding: 20px 0;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .pagination-button {
-      background-color: white;
-      color: #033b2d;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 18px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .pagination-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-    }
-
-    .pagination-button.disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-  </style>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="breakfast.css" />
 </head>
 <body>
   <h1>早餐推薦</h1>
 
   <a href="../index.html" class="home-button">返回首頁</a>
 
-  <a href="https://www.google.com/maps/place/三赫老麵燒餅/@23.0199835,120.2279928,17z/data=!3m1!4b1!4m6!3m5!1s0x346e7720d8215de7:0x967f5ba860061ba!8m2!3d23.0199786!4d120.2328637!16s%2Fg%2F11bc7pyxdf?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
-     class="card-button" target="_blank">
+  <a href="https://www.google.com/maps/place/三赫老麵燒餅/@23.0199835,120.2279928,17z/data=!3m1!4b1!4m6!3m5!1s0x346e7720d8215de7:0x967f5ba860061ba!8m2!3d23.0199786!4d120.2328637!16s%2Fg%2F11bc7pyxdf?entry=ttu"
+     class="card-button" target="_blank" rel="noopener">
     <div class="info">
       <h2>三赫燒餅</h2>
       <ul>
@@ -156,13 +22,13 @@
       </ul>
     </div>
     <div class="images">
-      <img src="三赫1.jpg" alt="蔡家招牌">
-      <img src="三赫2.jpg" alt="燒餅">
+      <img src="三赫1.jpg" alt="三赫燒餅店面招牌">
+      <img src="三赫2.jpg" alt="三赫蔥燒餅特寫">
     </div>
   </a>
 
-  <a href="https://www.google.com/maps/place/七誠米粿/@22.9958067,120.195557,17z/data=!3m1!4b1!4m6!3m5!1s0x346e773b450127b1:0xfa9be2c0019e3a5b!8m2!3d22.9958018!4d120.1981319!16s%2Fg%2F11cnbvv50w?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
-     class="card-button" target="_blank">
+  <a href="https://www.google.com/maps/place/七誠米粿/@22.9958067,120.195557,17z/data=!3m1!4b1!4m6!3m5!1s0x346e773b450127b1:0xfa9be2c0019e3a5b!8m2!3d22.9958018!4d120.1981319!16s%2Fg%2F11cnbvv50w?entry=ttu"
+     class="card-button" target="_blank" rel="noopener">
     <div class="info">
       <h2>七誠米粿</h2>
       <ul>
@@ -172,13 +38,13 @@
       </ul>
     </div>
     <div class="images">
-      <img src="米粿1.jpg" alt="上崙料理">
-      <img src="米粿2.jpg" alt="肉粽特寫">
+      <img src="米粿1.jpg" alt="七誠米粿餐點">
+      <img src="米粿2.jpg" alt="米粿特寫">
     </div>
   </a>
 
-  <a href="https://www.google.com/maps/place/復興國中旁發財車無名早餐(富春早堂)/@22.9830904,120.2348742,17z/data=!3m1!4b1!4m6!3m5!1s0x346e7787267e8575:0xa1a2374490aa13a3!8m2!3d22.9830855!4d120.2374491!16s%2Fg%2F11tp9r4907" 
-     class="card-button" target="_blank">
+  <a href="https://www.google.com/maps/place/復興國中旁發財車無名早餐(富春早堂)/@22.9830904,120.2348742,17z/data=!3m1!4b1!4m6!3m5!1s0x346e7787267e8575:0xa1a2374490aa13a3!8m2!3d22.9830855!4d120.2374491!16s%2Fg%2F11tp9r4907"
+     class="card-button" target="_blank" rel="noopener">
     <div class="info">
       <h2>富春早堂</h2>
       <ul>
@@ -188,8 +54,8 @@
       </ul>
     </div>
     <div class="images">
-      <img src="富春1.jpg" alt="武廟肉圓特寫">
-      <img src="富春2.jpg" alt="武廟店面">
+      <img src="富春1.jpg" alt="富春早堂粉漿蛋餅特寫">
+      <img src="富春2.jpg" alt="富春早堂發財車攤位">
     </div>
   </a>
 
@@ -197,7 +63,9 @@
     ZiyanGZiyaNG
   </div>
 
-
-
+  <div class="pagination">
+    <a href="breakfast.html" class="pagination-button">上一頁</a>
+    <a href="#" class="pagination-button disabled" aria-disabled="true">下一頁</a>
+  </div>
 </body>
 </html>
