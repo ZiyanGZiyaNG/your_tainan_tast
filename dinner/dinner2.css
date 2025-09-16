@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+body {
+  margin: 0;
+  padding: 40px;
+  background-color: #033b2d;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.home-button {
+  display: inline-block;
+  background-color: white;
+  color: #033b2d;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.card-button {
+  background-color: white;
+  color: black;
+  border-radius: 24px;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.card-button .info {
+  flex: 1;
+}
+
+.card-button h2 {
+  margin-top: 0;
+  color: #033b2d;
+  font-size: 32px;
+}
+
+.card-button ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.card-button li {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+}
+
+.images img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-button:hover .images img {
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+  padding: 20px 0;
+}
